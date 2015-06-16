@@ -1,2 +1,0 @@
-# courses
-alert('hi there');
