@@ -1,0 +1,38 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+<script>
+
+    function Cat(type, name){
+        this.Puma = type;
+        this.Barsik = name;
+
+        this.desc = function(){
+            document.write(this.Puma + ',' + this.Barsik + '</br>');
+        }
+    }
+
+
+    Cat.MAX_VALUE = 'Lion';
+    Cat.main = function () {
+        return new Cat ('Lion', 'King');
+    }
+
+
+    var m = new Cat('tiger', 'Vasya');
+    m.Puma = 'tiger1';
+    m.Barsik = 'Kisa';
+    m.desc();
+
+    var n = new Cat ('puma', 'Lola');
+    n.desc();
+
+    Cat.MAX_VALUE = 'Tiger';
+    Cat.main().desc();
+
+    </script>
+</body>
+            </html>

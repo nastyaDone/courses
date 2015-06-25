@@ -1,0 +1,39 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+<script>
+    function Box (h, w, d, m ) {
+            this.height = h;
+            this.width = w;
+            this.depth = d;
+            this.material = m;
+
+            this.Volume = function(){
+                document.write('Объем равен = ' + this.height * this.width * this.depth + '<br>');
+            };
+
+            Box.prototype.equals = function(same){
+                if(this.material === same.material){
+                    return true;
+                }
+                return false;
+            }
+        }
+
+
+
+    var box1 = new Box (10, 15, 7, 'metal');
+    var box2 = new Box (15, 17, 9, 'tree');
+
+    var res = box1.equals(box2);
+    document.write('box1 = box2: '+ res + '<br>');
+    box1.Volume();
+    box2.Volume();
+
+
+    </script>
+</body>
+            </html>

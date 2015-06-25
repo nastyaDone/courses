@@ -1,0 +1,31 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+<script>
+
+     function Human () {
+
+
+        var age = [26, 55, 30, 18, 78, 12, 46];
+         var count = age.length - 1;
+
+         for (var i=0; i < count; i++){
+         for (var j=0; j < count - i; j++){
+         if (age[j]< age[j+1]){
+             var max = age[j];
+             age[j] = age[j+1];
+             age[j+1] = max;
+         }}}
+         document.write(age);
+     //return age;
+     }
+    Human();
+    // document.write(Human());
+
+    </script>
+</body>
+            </html>
+

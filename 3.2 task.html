@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            window.onload = function (){
+                var counter = 0;
+                var startInterval;
+
+                function count(){
+                    get("meter").innerHTML = counter;
+                    counter++;
+                }
+
+                get("startCount").onclick = function(){
+                    startInterval = setInterval(count, 10);
+                }
+
+                get("stopCount").onclick = function(){
+                    clearInterval(startInterval);
+                }
+
+                get("cleanCount").onclick = function(){
+                    counter = 0;
+                    get("meter").innerHTML = 0;
+                }
+            }
+
+            var get = function (id){
+                return document.getElementById(id);
+            }
+
+        </script>
+    </head>
+    <body>
+
+    <p id="meter">0</p>
+    <input id="startCount" type="button" value="start" />
+    <input id="stopCount" type="button" value="stop" />
+    <input id="cleanCount" type="button" value="clean" />
+
+
+</body>
+            </html>
